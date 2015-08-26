@@ -7,7 +7,10 @@
 
 namespace app\assets;
 
+use yii;
 use yii\web\AssetBundle;
+use yii\helpers\FileHelper;
+use yii\helpers\StringHelper;
 
 /**
  * @author Qiang Xue <qiang.xue@gmail.com>
@@ -18,12 +21,20 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
+        'css/global.css',
     ];
     public $js = [
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        //'yii\bootstrap\BootstrapAsset',
     ];
+
+    public function __construct($config = []) {
+        parent::__construct($config);
+
+        foreach (FileHelper::findFiles(Yii::getAlias('@webroot/js')) as $absolutePath) {
+            $this->js[] = 'js/' . StringHelper::basename($absolutePath);
+        }
+    }
 }
