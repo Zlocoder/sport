@@ -24,12 +24,19 @@ class AppAsset extends AssetBundle
         'css/global.css',
     ];
     public $js = [
+        'js/chosen.jquery.min.js',
+        'js/jquery.mousewheel.js',
+        'js/jquery.jscrollpane.min.js',
+        'js/jquery.mousewheel.js',
+        'js/sly.js',
+        'js/custom.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
         //'yii\bootstrap\BootstrapAsset',
     ];
 
+    /*
     public function __construct($config = []) {
         parent::__construct($config);
 
@@ -37,4 +44,5 @@ class AppAsset extends AssetBundle
             $this->js[] = 'js/' . StringHelper::basename($absolutePath);
         }
     }
+    */
 }

@@ -74,7 +74,7 @@ $(document).ready(function( ){
         });
 
 	//--------------Выбор друзей
-		$(".chosen-select").chosen({no_results_text: "Таких друзей не нахожу!"}).trigger("chosen:open");  
+		$(".chosen-select").chosen({no_results_text: "Таких друзей не нахожу!"}).trigger("chosen:open");
 	
 	//--------------Скролл
 		$('.scroll-pane').jScrollPane({autoReinitialise: true,mouseWheelSpeed:10,verticalGutter:10});
