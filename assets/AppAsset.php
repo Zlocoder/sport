@@ -29,7 +29,8 @@ class AppAsset extends AssetBundle
         'js/jquery.jscrollpane.min.js',
         'js/jquery.mousewheel.js',
         'js/sly.js',
-        'js/custom.js'
+        'js/custom.js',
+        'js/jquery.arcticmodal-0.2.min.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
